@@ -1,6 +1,6 @@
 import Foundation
 
-protocol URLSessioning {
+public protocol URLSessioning {
     func data(for request: URLRequest) async throws -> (Data, URLResponse)
 }
 

@@ -1,4 +1,5 @@
 import Foundation
+import NetworkingLayer
 
 struct APIResultDTO: Decodable {
     let title: String

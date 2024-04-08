@@ -1,6 +1,6 @@
 import Foundation
 
-protocol RequestTarget {
+public protocol RequestTarget {
     var baseUrl: String { get }
     var path: String { get }
 }

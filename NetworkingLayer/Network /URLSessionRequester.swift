@@ -1,10 +1,15 @@
 import Foundation
 
-struct URLSessionRequester<ResultType: Decodable>: Requesting {
+public struct URLSessionRequester<ResultType: Decodable>: Requesting {
     let urlSession: URLSessioning
     let jsonDecoder: JSONDecoding
     
-    func request(target: RequestTarget) async throws -> ResultType {
+    public init(urlSession: URLSessioning, jsonDecoder: JSONDecoding) {
+        self.urlSession = urlSession
+        self.jsonDecoder = jsonDecoder
+    }
+    
+    public func request(target: RequestTarget) async throws -> ResultType {
         guard let urlRequest = URLRequest(target: target) else {
             throw RequestError.wrongTarget
         }
@@ -23,6 +28,8 @@ struct URLSessionRequester<ResultType: Decodable>: Requesting {
             return try jsonDecoder.decode(ResultType.self, from: data)
         } catch let error as DecodingError {
             throw RequestError.badData(error)
+        } catch let error as RequestError {
+            throw error
         } catch {
             throw RequestError.badRequest(error)
         }

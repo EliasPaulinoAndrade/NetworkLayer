@@ -1,24 +1,24 @@
 import Foundation
 
-protocol Requesting {
+public protocol Requesting {
     associatedtype ResultType: Decodable
     func request(target: RequestTarget) async throws -> ResultType
 }
 
-extension Requesting {
+public extension Requesting {
     var asGeneric: Requester<ResultType> {
         .init(requester: self)
     }
 }
 
-struct Requester<ResultType: Decodable>: Requesting {
+public struct Requester<ResultType: Decodable>: Requesting {
     private let requestClosure: (RequestTarget) async throws -> ResultType
     
     init<RequesterType: Requesting>(requester: RequesterType) where RequesterType.ResultType == ResultType {
         self.requestClosure = requester.request
     }
     
-    func request(target: RequestTarget) async throws -> ResultType {
+    public func request(target: RequestTarget) async throws -> ResultType {
         try await requestClosure(target)
     }
 }
