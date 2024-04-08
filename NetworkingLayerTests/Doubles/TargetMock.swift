@@ -1,7 +1,7 @@
 import Foundation
 import NetworkingLayer
 
-struct TargetMock: RequestTarget {
+struct TargetMock: RequestTarget, Equatable {
     let baseUrl: String
     let path: String
     

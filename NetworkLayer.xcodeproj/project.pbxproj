@@ -12,10 +12,12 @@
 		E31C63D62BC437110021836F /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31C63D52BC437110021836F /* URLSessionMock.swift */; };
 		E31C63D82BC437260021836F /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31C63D72BC437260021836F /* MockError.swift */; };
 		E31C63DA2BC4373F0021836F /* TargetMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31C63D92BC4373F0021836F /* TargetMock.swift */; };
+		E31C63DC2BC439D20021836F /* RequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31C63DB2BC439D20021836F /* RequesterTests.swift */; };
+		E31C63DE2BC43CC60021836F /* RequestingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31C63DD2BC43CC60021836F /* RequestingMock.swift */; };
 		E340116C2BC2CA3F0018AE8F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340116B2BC2CA3F0018AE8F /* main.swift */; };
 		E34011952BC421AD0018AE8F /* NetworkingLayer.docc in Sources */ = {isa = PBXBuildFile; fileRef = E34011942BC421AD0018AE8F /* NetworkingLayer.docc */; };
 		E340119B2BC421AE0018AE8F /* NetworkingLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E34011912BC421AD0018AE8F /* NetworkingLayer.framework */; };
-		E34011A02BC421AE0018AE8F /* NetworkingLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340119F2BC421AE0018AE8F /* NetworkingLayerTests.swift */; };
+		E34011A02BC421AE0018AE8F /* URLSessionRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340119F2BC421AE0018AE8F /* URLSessionRequesterTests.swift */; };
 		E34011A12BC421AE0018AE8F /* NetworkingLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E34011932BC421AD0018AE8F /* NetworkingLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E34011A82BC421FA0018AE8F /* URLSessionRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340117D2BC3691F0018AE8F /* URLSessionRequester.swift */; };
 		E34011A92BC421FA0018AE8F /* JSONDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340117B2BC3690E0018AE8F /* JSONDecoding.swift */; };
@@ -53,6 +55,8 @@
 		E31C63D52BC437110021836F /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		E31C63D72BC437260021836F /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
 		E31C63D92BC4373F0021836F /* TargetMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetMock.swift; sourceTree = "<group>"; };
+		E31C63DB2BC439D20021836F /* RequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequesterTests.swift; sourceTree = "<group>"; };
+		E31C63DD2BC43CC60021836F /* RequestingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestingMock.swift; sourceTree = "<group>"; };
 		E34011682BC2CA3F0018AE8F /* NetworkLayer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetworkLayer; sourceTree = BUILT_PRODUCTS_DIR; };
 		E340116B2BC2CA3F0018AE8F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		E34011732BC368B30018AE8F /* RequestTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTarget.swift; sourceTree = "<group>"; };
@@ -65,7 +69,7 @@
 		E34011932BC421AD0018AE8F /* NetworkingLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingLayer.h; sourceTree = "<group>"; };
 		E34011942BC421AD0018AE8F /* NetworkingLayer.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = NetworkingLayer.docc; sourceTree = "<group>"; };
 		E340119A2BC421AE0018AE8F /* NetworkingLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E340119F2BC421AE0018AE8F /* NetworkingLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingLayerTests.swift; sourceTree = "<group>"; };
+		E340119F2BC421AE0018AE8F /* URLSessionRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionRequesterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 				E31C63D52BC437110021836F /* URLSessionMock.swift */,
 				E31C63D72BC437260021836F /* MockError.swift */,
 				E31C63D92BC4373F0021836F /* TargetMock.swift */,
+				E31C63DD2BC43CC60021836F /* RequestingMock.swift */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -169,7 +174,8 @@
 			children = (
 				E31C63D22BC436DB0021836F /* Doubles */,
 				E31C63CF2BC436360021836F /* Asserts */,
-				E340119F2BC421AE0018AE8F /* NetworkingLayerTests.swift */,
+				E340119F2BC421AE0018AE8F /* URLSessionRequesterTests.swift */,
+				E31C63DB2BC439D20021836F /* RequesterTests.swift */,
 			);
 			path = NetworkingLayerTests;
 			sourceTree = "<group>";
@@ -326,11 +332,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E31C63DE2BC43CC60021836F /* RequestingMock.swift in Sources */,
 				E31C63D62BC437110021836F /* URLSessionMock.swift in Sources */,
 				E31C63D82BC437260021836F /* MockError.swift in Sources */,
 				E31C63DA2BC4373F0021836F /* TargetMock.swift in Sources */,
 				E31C63D42BC436E30021836F /* JSONDecoderMock.swift in Sources */,
-				E34011A02BC421AE0018AE8F /* NetworkingLayerTests.swift in Sources */,
+				E31C63DC2BC439D20021836F /* RequesterTests.swift in Sources */,
+				E34011A02BC421AE0018AE8F /* URLSessionRequesterTests.swift in Sources */,
 				E31C63D12BC436AB0021836F /* ShouldThrow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

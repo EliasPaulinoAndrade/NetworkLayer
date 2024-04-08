@@ -1,7 +1,7 @@
 import XCTest
 import NetworkingLayer
 
-final class NetworkingLayerTests: XCTestCase {
+final class URLSessionRequesterTests: XCTestCase {
     func testRequest_WhenHasWrongTarget_ShouldThrowWrongTarget() async throws {
         let (sut, _) = createSUT(forResultType: String.self)
         let targetStub = TargetMock(baseUrl: "bla.com", path: "path")
@@ -95,7 +95,7 @@ final class NetworkingLayerTests: XCTestCase {
     }
 }
 
-private extension NetworkingLayerTests {
+private extension URLSessionRequesterTests {
     typealias Doubles = (
         urlSessionMock: URLSessionMock,
         jsonDecoderMock: JSONDecoderMock
